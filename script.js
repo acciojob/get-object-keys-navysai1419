@@ -1,12 +1,12 @@
-// Create an object called student with a property called name
+// Create the student object with a name property
 const student = {
-    name: "John"
+    name: "navya"
 };
 
-// Add a utility function to get keys of an object
-function getKeys(obj) {
-    return Object.keys(obj);
-}
+// Extend the Object.prototype to add the getKeys() method
+Object.prototype.getKeys = function() {
+    return Object.keys(this);
+};
 
 // Example usage
-console.log(getKeys(student)); // Output: ['name']
+console.log(student.getKeys()); // Output: ['name']
