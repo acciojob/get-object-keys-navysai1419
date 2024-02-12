@@ -1,15 +1,10 @@
-//your JS code here. If req
-student={name:navya,
-		 _proto_{
-			 getKeys(){
-				 for(key in student)
-					return key
-			 }
-		 }
-		
-		
-		}
-student.geTkeys();
+const student = {
+    name: "navya",
+    __proto__: {
+        getKeys() {
+            return Object.keys(this);
+        }
+    }
+};
 
-
-
+console.log(student.getKeys()); // Output: ['name']
